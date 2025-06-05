@@ -17,7 +17,7 @@ wheels = [
 ]
 
 [[package]]
-name = "baish"
+name = "baish-assistant"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [

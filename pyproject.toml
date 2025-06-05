@@ -1,9 +1,9 @@
 [project]
-name = "baish"
+name = "baish-assistant"
 version = "0.1.0"
 description = "Convert natural language instructions to bash commands using Ollama"
 readme = "README.md"
-authors = [{name = "tcsenpai", email = "tcsenpai@example.com"}]
+authors = [{name = "tcsenpai", email = "tcsenpai@discus.sh"}]
 license = {text = "MIT"}
 keywords = ["cli", "bash", "ollama", "nlp", "terminal", "ai"]
 classifiers = [
