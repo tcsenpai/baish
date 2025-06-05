@@ -1,0 +1,62 @@
+[project]
+name = "baish"
+version = "0.1.0"
+description = "Convert natural language instructions to bash commands using Ollama"
+readme = "README.md"
+authors = [{name = "tcsenpai", email = "tcsenpai@example.com"}]
+license = {text = "MIT"}
+keywords = ["cli", "bash", "ollama", "nlp", "terminal", "ai"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: System Shells",
+    "Topic :: Utilities",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "rich>=13.0.0",
+    "click>=8.0.0",
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+]
+
+[project.scripts]
+baish = "baish.main:main"
+
+[project.urls]
+Homepage = "https://github.com/tcsenpai/baish"
+Repository = "https://github.com/tcsenpai/baish"
+"Bug Reports" = "https://github.com/tcsenpai/baish/issues"
+Documentation = "https://github.com/tcsenpai/baish#readme"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "build>=1.0.0",
+    "twine>=4.0.0",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "build>=1.0.0",
+    "twine>=4.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
