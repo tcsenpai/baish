@@ -213,96 +213,6 @@ black .
 ruff check .
 ```
 
-## 📦 Publishing to PyPI
-
-### Prerequisites
-
-1. **PyPI Account**: Create accounts on [PyPI](https://pypi.org) and [TestPyPI](https://test.pypi.org)
-2. **API Tokens**: Generate API tokens for both platforms
-3. **Build Tools**: Install required tools
-
-```bash
-pip install build twine
-```
-
-### Publishing Steps
-
-#### 1. Prepare the Package
-
-```bash
-# Update version in pyproject.toml
-# Ensure all files are committed
-git add .
-git commit -m "Prepare for release v0.1.0"
-git tag v0.1.0
-```
-
-#### 2. Build the Package
-
-```bash
-# Clean previous builds
-rm -rf dist/ build/ *.egg-info/
-
-# Build source and wheel distributions
-python -m build
-```
-
-#### 3. Test on TestPyPI (Optional but Recommended)
-
-```bash
-# Upload to TestPyPI
-twine upload --repository testpypi dist/*
-
-# Test installation
-pip install --index-url https://test.pypi.org/simple/ baish
-```
-
-#### 4. Upload to PyPI
-
-```bash
-# Upload to PyPI
-twine upload dist/*
-```
-
-#### 5. Verify Installation
-
-```bash
-pip install baish
-baish --help
-```
-
-### Automated Publishing with GitHub Actions
-
-Create `.github/workflows/publish.yml`:
-
-```yaml
-name: Publish to PyPI
-
-on:
-  release:
-    types: [published]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install build twine
-    - name: Build package
-      run: python -m build
-    - name: Publish to PyPI
-      uses: pypa/gh-action-pypi-publish@release/v1
-      with:
-        password: ${{ secrets.PYPI_API_TOKEN }}
-```
-
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -325,7 +235,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - 🐛 **Bug Reports**: [GitHub Issues](https://github.com/tcsenpai/baish/issues)
 - 💡 **Feature Requests**: [GitHub Discussions](https://github.com/tcsenpai/baish/discussions)
-- 📧 **Email**: [your-email@example.com]
+- 📧 **Email**: [tcsenpai@discus.sh]
 
 ---
 
