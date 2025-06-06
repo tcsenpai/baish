@@ -1,6 +1,6 @@
 [project]
 name = "baish-assistant"
-version = "0.1.0"
+version = "0.1.2"
 description = "Convert natural language instructions to bash commands using Ollama"
 readme = "README.md"
 authors = [{name = "tcsenpai", email = "tcsenpai@discus.sh"}]
@@ -31,7 +31,7 @@ dependencies = [
 ]
 
 [project.scripts]
-baish = "baish.main:main"
+baish = "baish_assistant.main:main"
 
 [project.urls]
 Homepage = "https://github.com/tcsenpai/baish"

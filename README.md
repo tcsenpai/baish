@@ -28,7 +28,7 @@ Baish is a simple, elegant terminal application that converts natural language i
 
 #### Option 1: From PyPI (Recommended)
 ```bash
-pip install baish
+pip install baish_assistant
 ```
 
 #### Option 2: From Source
