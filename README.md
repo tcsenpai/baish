@@ -43,7 +43,7 @@ uv pip install -e .
 git clone https://github.com/tcsenpai/baish.git
 cd baish
 uv pip install rich click python-dotenv requests
-python main.py "show my ip address"
+python baish_assistant/main.py "show my ip address"
 ```
 
 ### Configuration
@@ -73,7 +73,7 @@ baish -h
 
 # Direct execution (without installation)
 python main.py "find python files"
-uv run python main.py -i
+uv run python baish_assistant/main.py -i
 ```
 
 ### Interactive Mode
